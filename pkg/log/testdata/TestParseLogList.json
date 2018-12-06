@@ -1,0 +1,135 @@
+{
+  "account": "wb38a11ed",
+  "application": "i32ac2hcioem",
+  "component": "web",
+  "logFiles": [
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-06.log",
+      "size": 333,
+      "lastModified": 1544090215000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-05.log",
+      "size": 261,
+      "lastModified": 1544003808000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-04.log",
+      "size": 261,
+      "lastModified": 1543917403000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-06.log",
+      "size": 16351,
+      "lastModified": 1544112159000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-11-29.log",
+      "size": 262,
+      "lastModified": 1543485366000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-04.log",
+      "size": 5067,
+      "lastModified": 1543967402000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-01.log",
+      "size": 261,
+      "lastModified": 1543658164000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-11-30.log",
+      "size": 261,
+      "lastModified": 1543571764000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-02.log",
+      "size": 386,
+      "lastModified": 1543751031000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-03.log",
+      "size": 5058,
+      "lastModified": 1543881362000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "ljs_trace_f4ea0a3_2018-12-03.log",
+      "size": 261,
+      "lastModified": 1543830998000,
+      "description": "Default Trace",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-05.log",
+      "size": 5050,
+      "lastModified": 1544054147000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-02.log",
+      "size": 5001,
+      "lastModified": 1543794724000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-11-29.log",
+      "size": 4987,
+      "lastModified": 1543535402000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-11-30.log",
+      "size": 5117,
+      "lastModified": 1543621978000,
+      "description": "GC file",
+      "component": "web"
+    },
+    {
+      "processId": "f4ea0a389d568198ae36ec467a72907406df1532",
+      "name": "gc_f4ea0a3_2018-12-01.log",
+      "size": 5142,
+      "lastModified": 1543708743000,
+      "description": "GC file",
+      "component": "web"
+    }
+  ]
+}

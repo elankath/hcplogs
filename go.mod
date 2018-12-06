@@ -1,0 +1,10 @@
+module github.com/elankath/hcptool
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pkg/errors v0.8.0
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/stretchr/testify v1.2.2
+	golang.org/x/crypto v0.0.0-20181203042331-505ab145d0a9
+	golang.org/x/sys v0.0.0-20181206074257-70b957f3b65e // indirect
+)

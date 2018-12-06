@@ -1,0 +1,5 @@
+*.go text eol=lef
+*.html text eol=lef
+*.css text eol=lef
+*.js text eol=lef
+*.java text eol=lef
