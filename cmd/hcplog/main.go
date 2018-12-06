@@ -9,7 +9,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/elankath/hcptool/pkg/log"
+	"github.com/elankath/hcptool/pkg/hcplog"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/ssh/terminal"
 )
