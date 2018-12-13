@@ -167,8 +167,8 @@ func (c *Client) GrabFilesAndPrint(app string, names []string ,w io.Writer) erro
 	if err != nil {
 		return  err
 	}
-	for _, fi := range fileInfos {
-		for _, name := range names {
+	for _, name := range names {
+		for _, fi := range fileInfos {
 			g := glob.MustCompile(name)
 			if g.Match(fi.Name) {
 				fmt.Printf("%s matches %s\n", fi.Name, name)
@@ -178,6 +178,7 @@ func (c *Client) GrabFilesAndPrint(app string, names []string ,w io.Writer) erro
 	}
 	return nil
 }
+
 
 
 // ParseLogList parses JSON input from the given reader into a slice of log file infos.
