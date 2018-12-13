@@ -108,7 +108,7 @@ func (c *Client) ListFiles(app string) ([]FileInfo, error) {
 	return ParseLogList(resp.Body)
 }
 
-func (c *Client) Download(app string, filename string) error {
+func (c *Client) Download(app string, dir string, filename string) error {
 	logsEndpoint := c.Config.AccessEndpoint + c.Config.Account + "/" + app + "/web/" + filename
 	log.Println("GET ", logsEndpoint, "...")
 	req, err := http.NewRequest("GET", logsEndpoint, nil)
@@ -124,10 +124,6 @@ func (c *Client) Download(app string, filename string) error {
 		return errors.Errorf("Failed to download file %s of %s:%s due to %s", filename, c.Config.Account, app, resp.Status)
 	}
 	defer resp.Body.Close()
-	dir, err := os.Getwd()
-	if err != nil {
-		return errors.Wrapf(err, "Failed to download file %s of %s:%s", filename, c.Config.Account, app)
-	}
 	fpath := filepath.Join(dir, filename)
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
@@ -167,18 +163,35 @@ func (c *Client) GrabFilesAndPrint(app string, names []string ,w io.Writer) erro
 	if err != nil {
 		return  err
 	}
+	dir, err := os.Getwd()
+	if err != nil {
+		return errors.Wrapf(err, "Failed to get current dir")
+	}
 	for _, name := range names {
 		for _, fi := range fileInfos {
 			g := glob.MustCompile(name)
 			if g.Match(fi.Name) {
-				fmt.Printf("%s matches %s\n", fi.Name, name)
-				c.Download(app, fi.Name)
+				fmt.Printf("%s Matches %s\n", fi.Name, name)
+				if Exists(filepath.Join(dir, fi.Name)) {
+					fmt.Printf("File %s already exists. Skipping download\n", fi.Name)
+					continue
+				}
+				c.Download(app, dir, fi.Name)
 			}
 		}
 	}
 	return nil
 }
 
+// Exists reports whether the named file or directory exists.
+func Exists(name string) bool {
+	if _, err := os.Stat(name); err != nil {
+		if os.IsNotExist(err) {
+			return false
+		}
+	}
+	return true
+}
 
 
 // ParseLogList parses JSON input from the given reader into a slice of log file infos.
