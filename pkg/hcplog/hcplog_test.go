@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"path/filepath"
 	"testing"
 
@@ -13,18 +14,22 @@ import (
 func TestParseLogList(t *testing.T) {
 	r := bytes.NewReader(helperLoad(t, t.Name()+".json"))
 	logFiles, err := ParseLogList(r)
-	assert.Equal(t, 123, 123, "they should be equal")
-	assert.Nil(t, err, "Cant parse log files payload")
-	fmt.Printf("Log files: %v", logFiles)
+	log.Printf("%s: Failed: %v", t.Name(), err)
+	if assert.NoError(t, err) {
+		fmt.Printf("%s: Log files: %v\n", t.Name(), logFiles)
+		assert.NotNil(t, logFiles, "logFiles must not be nil")
+	} else {
+		log.Printf("%s: Failed: %v", t.Name(), err)
+	}
 }
 
 // See https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859
 func helperLoad(t *testing.T, name string) []byte {
 	t.Helper()
 	path := filepath.Join("testdata", name) // relative path
-	bytes, err := ioutil.ReadFile(path)
+	b, err := ioutil.ReadFile(path)
 	if err != nil {
 		t.Fatal(err)
 	}
-	return bytes
+	return b
 }
